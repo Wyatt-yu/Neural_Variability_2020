@@ -19,7 +19,7 @@
 %corresponding to the 95th percentile of the max tstat distribution
  
  
-%load in data¡ª¡ª200 parcels(ROIs).
+%load in dataâ€”â€”200 parcels(ROIs).
 load(['C:\Users\Acer\Desktop\craddock_parcellation_tutorial' '/Vis/' 'parcel_Fz_Vis_200.mat']);
 M=200;
 
@@ -30,7 +30,7 @@ p_DDxiaoyuAC=ones(200,1)
 t_DDxiaoyuAC=zeros(200,1);
 for N=1:M
 [p_DDxiaoyuAC(N),~,stat]=ttest2(parcel_Fz_Vis(N,Vis_Cao_AC_ID)',parcel_Fz_Vis(N,Vis_Cao_DD_ID)','Alpha',0.005,'Dim',1,'tail','left','Vartype','unequal');tval_DDdayuAC(N)=stat.tval;
-t_DDxiaoyuAC(N)=stat.tstat; %ÉÏÒ»ÐÐ¸Ä³É ACÓëDDÁË£¬ÓÒÎ²£¬TÖµÔ½´ó£¬´ú±íDDÐ¡µÃÔ½¶à
+t_DDxiaoyuAC(N)=stat.tstat; 
 end
   
 
