@@ -3,8 +3,8 @@ clc
 
 addpath(genpath('D:/MATLAB/NIFTI'));
 %addpath(genpath('D:/MATLAB/GRETNA_master'));
-path='F:\字形加工中的神经噪音\analyses_neural noise\Aud\Per_Fix_spmT_1st';
-load(['F:\字形加工中的神经噪音\analyses_neural noise/Aud/' 'parcellist_200_craddock_Aud.mat']);
+path='F:\....';
+load(['F:\....' 'parcellist_200_craddock_Vis.mat']);
 
 S1_Tmaps=dir([path '/S1/' '*.nii']);
 S2_Tmaps=dir([path '/S2/' '*.nii']);
@@ -29,6 +29,4 @@ r=parcel_corr_Vis_LexFix;
 t=(1+r)./(1-r);
 parcel_Fz_Vis_perFix=0.5*log(t);
 
-save(['F:\字形加工中的神经噪音\analyses_neural noise\Aud\Per_Fix_spmT_1st' '/' 'parcel_Fz_Aud_perFix_' num2str(M) '.mat'],'parcel_Fz_Aud_perFix');
- 
-M=200; 
+save([path '/' 'parcel_Fz_Vis' '.mat'],'parcel_Fz_Vis_perFix');
